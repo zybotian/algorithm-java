@@ -9,3 +9,5 @@
 - [ThreadLocal-线程安全](https://github.com/zybotian/algorithm_java/blob/master/src/main/java/solution/q2/Singleton7.java)
 - [AtomicReference+CAS-线程安全](https://github.com/zybotian/algorithm_java/blob/master/src/main/java/solution/q2/Singleton8.java)
 #### [q5:逆序输出单向链表](https://github.com/zybotian/algorithm_java/blob/master/src/main/java/solution/q5/Solution.java)
+-[栈](https://github.com/zybotian/algorithm_java/blob/master/src/main/java/solution/q5/Solution.java)
+-[递归](https://github.com/zybotian/algorithm_java/blob/master/src/main/java/solution/q5/Solution.java)
