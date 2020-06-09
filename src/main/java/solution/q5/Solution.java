@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.Stack;
 
 public class Solution {
-
+    // 逆序输出单向链表
     // 使用栈
     public List<Integer> printReverse(ListNode list) {
         if (Objects.isNull(list)) {

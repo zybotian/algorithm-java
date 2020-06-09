@@ -3,7 +3,7 @@ package solution.q3;
 import utils.ArrayUtils;
 
 public class Solution {
-    // 二维有序数组中查找目标值
+    // 二维有序数组中查找目标值，数组的行和列都是递增的
 
     public boolean find1(int[][] array, int target) {
         if (array == null || array.length == 0 || array[0].length == 0) {
