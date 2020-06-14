@@ -2,8 +2,11 @@ package utils;
 
 import common.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TreeNodeUtils {
-    public static TreeNode create(int n) {
+    public static TreeNode create() {
         TreeNode node1 = new TreeNode(1);
         TreeNode node2 = new TreeNode(2);
         TreeNode node3 = new TreeNode(3);
@@ -21,6 +24,25 @@ public class TreeNodeUtils {
         node3.left = node6;
         node3.right = node7;
         return node1;
+    }
+
+    public static TreeNode create(int[] arr) {
+        if (arr.length == 1) {
+            return new TreeNode(arr[0]);
+        }
+        List<TreeNode> nodeList = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            nodeList.add(new TreeNode(arr[i]));
+        }
+        int temp = 0;
+        while (temp <= (arr.length - 2) / 2) { //注意这里，数组的下标是从零开始的
+            if (2 * temp + 1 < arr.length)
+                nodeList.get(temp).left = nodeList.get(2 * temp + 1);
+            if (2 * temp + 2 < arr.length)
+                nodeList.get(temp).right = nodeList.get(2 * temp + 2);
+            temp++;
+        }
+        return nodeList.get(0);
     }
 
     public static void preOrder(TreeNode root) {
