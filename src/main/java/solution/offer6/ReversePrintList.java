@@ -1,19 +1,16 @@
-package solution.q5;
+package solution.offer6;
 
 import common.ListNode;
 import utils.ListNodeUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Stack;
+import java.util.*;
 
-public class Solution {
+public class ReversePrintList {
     // 逆序输出单向链表
     // 使用栈
-    public List<Integer> printReverse(ListNode list) {
+    public int[] printReverse(ListNode list) {
         if (Objects.isNull(list)) {
-            return null;
+            return new int[0];
         }
 
         Stack<Integer> stack = new Stack<>();
@@ -22,10 +19,12 @@ public class Solution {
             stack.push(curr.val);
             curr = curr.next;
         }
-        List<Integer> result = new ArrayList<>();
+        int k = 0;
+        int[] result = new int[stack.size()];
         while (!stack.isEmpty()) {
-            result.add(stack.pop());
+            result[k++] = stack.pop();
         }
+
         return result;
     }
 
@@ -45,13 +44,13 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        ReversePrintList reversePrintList = new ReversePrintList();
 
         ListNode list = ListNodeUtils.create();
-        List<Integer> result1 = solution.printReverse(list);
-        System.out.println(result1);
+        int[] result1 = reversePrintList.printReverse(list);
+        System.out.println(Arrays.toString(result1));
 
-        List<Integer> result2 = solution.printReverse2(list);
+        List<Integer> result2 = reversePrintList.printReverse2(list);
         System.out.println(result2);
     }
 }
