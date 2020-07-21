@@ -1,4 +1,4 @@
-package solution.q19;
+package solution.offer27;
 
 import common.TreeNode;
 import utils.TreeNodeUtils;
@@ -6,7 +6,7 @@ import utils.TreeNodeUtils;
 /**
  * 求输入的二叉树的镜像二叉树
  */
-public class Solution {
+public class MirrorTree {
 
     public TreeNode mirror(TreeNode root) {
         if (root == null) {
@@ -29,9 +29,9 @@ public class Solution {
 
     public static void main(String[] args) {
         TreeNode root = TreeNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7});
-        Solution solution = new Solution();
+        MirrorTree mirrorTree = new MirrorTree();
 
-        TreeNode mirror = solution.mirror(root);
+        TreeNode mirror = mirrorTree.mirror(root);
         TreeNodeUtils.preOrder(mirror);
         System.out.println();
         TreeNodeUtils.inOrder(mirror);

@@ -1,13 +1,13 @@
-package solution.q37;
+package solution.offer52;
 
 import common.ListNode;
 import utils.ListNodeUtils;
 
 import java.util.Stack;
 
-public class Solution {
+public class GetIntersectionNode {
 
-    // 最简单的寻找链表第一个公共节点的方法
+    // 最简单的寻找链表第一个公共节点的方法,但是这个方法针对两个链表没有公共节点的情况，会死循环
     public ListNode firstSameNode(ListNode list1, ListNode list2) {
         ListNode p1 = list1;
         ListNode p2 = list2;
@@ -81,8 +81,8 @@ public class Solution {
         ListNode list1 = ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7});
         ListNode list2 = ListNodeUtils.create(new int[]{10, 20, 30});
         list2.next.next.next = list1.next.next.next;
-        System.out.println(new Solution().firstSameNode(list1, list2));
-        System.out.println(new Solution().firstSameNode2(list1, list2));
-        System.out.println(new Solution().firstSameNode3(list1, list2));
+        System.out.println(new GetIntersectionNode().firstSameNode(list1, list2));
+        System.out.println(new GetIntersectionNode().firstSameNode2(list1, list2));
+        System.out.println(new GetIntersectionNode().firstSameNode3(list1, list2));
     }
 }

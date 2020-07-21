@@ -1,15 +1,14 @@
-package solution.q39;
+package solution.offer55_2;
 
 import common.TreeNode;
 import utils.TreeNodeUtils;
 
 /**
- * 二叉树的深度
+ * 是否是平衡二叉树
  */
-public class Solution {
+public class IsBalanceTree {
 
-    // 递归
-    public int depth(TreeNode root) {
+    private int depth(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -24,8 +23,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.depth(TreeNodeUtils.create()));
-        System.out.println(solution.isBalanced(TreeNodeUtils.create()));
+        IsBalanceTree isBalanceTree = new IsBalanceTree();
+        System.out.println(isBalanceTree.isBalanced(TreeNodeUtils.create()));
     }
 }
