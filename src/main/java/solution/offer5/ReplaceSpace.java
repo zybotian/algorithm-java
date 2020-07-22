@@ -1,12 +1,20 @@
-package solution.q4;
+package solution.offer5;
 
-public class Solution {
+public class ReplaceSpace {
+
+    public String replaceSpace(String s) {
+        return s == null ? "" : s.replaceAll("\\s", "%20");
+    }
+
+    public String replaceSpace2(String s) {
+        return s == null ? "" : s.replaceAll(" ", "%20");
+    }
 
     // 将字符串中的空格替换为%20
     // 直接遍历转换
-    public String replaceSpace(String string) {
+    public String replaceSpace3(String string) {
         if (string == null || string.length() == 0) {
-            return null;
+            return "";
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < string.length(); i++) {
@@ -52,14 +60,14 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.replaceSpace("we are happy."));
+        ReplaceSpace replaceSpace = new ReplaceSpace();
+        System.out.println(replaceSpace.replaceSpace2("we are happy."));
         char[] string = new char[100];
         char[] source = {'w', 'e', ' ', 'a', 'r', 'e', ' ', 'h', 'a', 'p', 'p', 'y', '.', '\0'};
         for (int i = 0; i < source.length; i++) {
             string[i] = source[i];
         }
 
-        System.out.println(solution.replaceSpace2(string));
+        System.out.println(replaceSpace.replaceSpace2(string));
     }
 }
