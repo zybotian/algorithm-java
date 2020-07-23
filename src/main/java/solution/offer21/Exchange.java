@@ -1,11 +1,11 @@
-package solution.q14;
+package solution.offer21;
 
 import java.util.Arrays;
 
 /**
  * 将数组中的奇数移动到偶数前
  */
-public class Solution {
+public class Exchange {
 
     public int[] reOrder(int[] data) {
         if (data == null || data.length == 0) {
@@ -14,10 +14,10 @@ public class Solution {
 
         int left = 0, right = data.length - 1;
         while (left < right) {
-            while (left < right && data[left] % 2 == 1) {
+            while (left < right && (data[left] & 1) == 1) {
                 left++;
             }
-            while (right > left && data[right] % 2 == 0) {
+            while (right > left && (data[right] & 1) == 0) {
                 right--;
             }
             if (left < right) {
@@ -31,9 +31,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Exchange exchange = new Exchange();
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(Arrays.toString(solution.reOrder(array)));
+        System.out.println(Arrays.toString(exchange.reOrder(array)));
     }
 
 }
