@@ -1,10 +1,10 @@
-package solution.q21;
+package solution.offer30;
 
 import java.util.Stack;
 
 /**包括min函数的栈
  */
-public class Solution {
+public class MinStack {
     // 数据栈
     Stack<Integer> dataStack = new Stack<>();
     // 最小值栈
@@ -36,30 +36,35 @@ public class Solution {
         return minStack.peek();
     }
 
+    public int top() {
+        return dataStack.peek();
+    }
+
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.push(10);
-        System.out.println(solution.min());
+        MinStack minStack = new MinStack();
+        minStack.push(10);
+        System.out.println(minStack.min());
+        System.out.println(minStack.top());
 
-        solution.push(8);
-        System.out.println(solution.min());
+        minStack.push(8);
+        System.out.println(minStack.min());
 
-        solution.push(5);
-        System.out.println(solution.min());
+        minStack.push(5);
+        System.out.println(minStack.min());
 
-        solution.push(9);
-        System.out.println(solution.min());
+        minStack.push(9);
+        System.out.println(minStack.min());
 
-        solution.push(9);
-        System.out.println(solution.min());
+        minStack.push(9);
+        System.out.println(minStack.min());
 
-        System.out.println(solution.pop());
-        System.out.println(solution.min());
+        System.out.println(minStack.pop());
+        System.out.println(minStack.min());
 
-        System.out.println(solution.pop());
-        System.out.println(solution.min());
+        System.out.println(minStack.pop());
+        System.out.println(minStack.min());
 
-        System.out.println(solution.pop());
-        System.out.println(solution.min());
+        System.out.println(minStack.pop());
+        System.out.println(minStack.min());
     }
 }
