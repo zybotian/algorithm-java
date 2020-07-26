@@ -28,7 +28,7 @@ public class CQueue {
     }
 
     public static void main(String[] args) {
-        NewQueue queue = new CQueue().new solution.q7.NewQueue.NewQueue();
+        NewQueue queue = new CQueue().new NewQueue();
         queue.push(1);
         queue.push(2);
         queue.push(3);
