@@ -1,8 +1,8 @@
-package solution.q3;
+package solution.offer4;
 
 import utils.ArrayUtils;
 
-public class Solution {
+public class FindNumberIn2DArray {
     // 二维有序数组中查找目标值，数组的行和列都是递增的
 
     public boolean find1(int[][] array, int target) {
@@ -73,28 +73,28 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        FindNumberIn2DArray findNumberIn2DArray = new FindNumberIn2DArray();
         final int[][] nums = ArrayUtils.create(3, 4);
         ArrayUtils.print(nums);
 
         for (int i = 1; i <= 12; i++) {
-            System.out.println(solution.find1(nums, i));
+            System.out.println(findNumberIn2DArray.find1(nums, i));
         }
-        System.out.println(solution.find1(nums, 100));
+        System.out.println(findNumberIn2DArray.find1(nums, 100));
 
         System.out.println("***************************");
 
         for (int i = 1; i <= 12; i++) {
-            System.out.println(solution.find2(nums, i));
+            System.out.println(findNumberIn2DArray.find2(nums, i));
         }
 
-        System.out.println(solution.find2(nums, 100));
+        System.out.println(findNumberIn2DArray.find2(nums, 100));
         System.out.println("***************************");
 
 
         for (int i = 1; i <= 12; i++) {
-            System.out.println(solution.find3(nums, i));
+            System.out.println(findNumberIn2DArray.find3(nums, i));
         }
-        System.out.println(solution.find3(nums, 100));
+        System.out.println(findNumberIn2DArray.find3(nums, 100));
     }
 }

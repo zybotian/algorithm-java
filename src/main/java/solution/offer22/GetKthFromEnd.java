@@ -1,4 +1,4 @@
-package solution.q15;
+package solution.offer22;
 
 import common.ListNode;
 import utils.ListNodeUtils;
@@ -6,7 +6,7 @@ import utils.ListNodeUtils;
 /**
  * 求链表的倒数第k个节点
  */
-public class Solution {
+public class GetKthFromEnd {
 
     // 快慢指针
     public ListNode findKthNodeFromTail(ListNode head, int k) {
@@ -51,8 +51,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.findKthNodeFromTail(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7}), 3));
-        System.out.println(solution.findKthNodeFromTail2(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7}), 3));
+        GetKthFromEnd getKthFromEnd = new GetKthFromEnd();
+        System.out.println(getKthFromEnd.findKthNodeFromTail(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7}), 3));
+        System.out.println(getKthFromEnd.findKthNodeFromTail2(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7}), 3));
     }
 }
