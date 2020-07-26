@@ -1,8 +1,8 @@
-package solution.q7;
+package solution.offer9;
 
 import java.util.Stack;
 
-public class Solution {
+public class CQueue {
 
     // 两个栈实现一个队列
     public class NewQueue {
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        NewQueue queue = new Solution().new NewQueue();
+        NewQueue queue = new CQueue().new solution.q7.NewQueue.NewQueue();
         queue.push(1);
         queue.push(2);
         queue.push(3);
