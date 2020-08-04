@@ -19,4 +19,8 @@ public class ArrayUtils {
             System.out.println(Arrays.toString(array[i]));
         }
     }
+
+    public static void print(int[] array) {
+        System.out.println(Arrays.toString(array));
+    }
 }

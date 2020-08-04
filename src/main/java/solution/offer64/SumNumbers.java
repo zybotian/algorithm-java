@@ -1,6 +1,6 @@
-package solution.q46;
+package solution.offer64;
 
-public class Solution {
+public class SumNumbers {
 
     /**
      * 不要循环、乘除法求1~n的和
