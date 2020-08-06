@@ -1,10 +1,16 @@
-package solution.q29;
+package solution.offer39;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution {
+public class MajorityElement {
+
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length>>1];
+    }
+
     // 排序,时间复杂度O(nlogn)
     public int findMoreThanHalf(int[] data) {
         if (data == null || data.length == 0) {
@@ -64,9 +70,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.findMoreThanHalf(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
-        System.out.println(solution.findMoreThanHalf2(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
-        System.out.println(solution.findMoreThanHalf3(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
+        MajorityElement majorityElement = new MajorityElement();
+        System.out.println(majorityElement.findMoreThanHalf(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
+        System.out.println(majorityElement.findMoreThanHalf2(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
+        System.out.println(majorityElement.findMoreThanHalf3(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
+        System.out.println(majorityElement.majorityElement(new int[]{1, 2, 2, 3, 2, 4, 2, 2, 2, 5, 6}));
     }
 }
