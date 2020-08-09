@@ -1,4 +1,4 @@
-package solution.q16;
+package solution.offer24;
 
 import common.ListNode;
 import utils.ListNodeUtils;
@@ -6,7 +6,7 @@ import utils.ListNodeUtils;
 /**
  * 链表反转
  */
-public class Solution {
+public class ReverseList {
 
     // 直接反转
     public ListNode reverse(ListNode head) {
@@ -44,15 +44,15 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        ListNodeUtils.println(solution.reverse(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7})));
-        ListNodeUtils.println(solution.reverse(ListNodeUtils.create(new int[]{1})));
-        ListNodeUtils.println(solution.reverse(ListNodeUtils.create(new int[]{1, 2})));
-        ListNodeUtils.println(solution.reverse(ListNodeUtils.create(new int[]{1, 2, 3})));
+        ReverseList reverseList = new ReverseList();
+        ListNodeUtils.println(reverseList.reverse(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7})));
+        ListNodeUtils.println(reverseList.reverse(ListNodeUtils.create(new int[]{1})));
+        ListNodeUtils.println(reverseList.reverse(ListNodeUtils.create(new int[]{1, 2})));
+        ListNodeUtils.println(reverseList.reverse(ListNodeUtils.create(new int[]{1, 2, 3})));
 
-        ListNodeUtils.println(solution.reverse2(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7})));
-        ListNodeUtils.println(solution.reverse2(ListNodeUtils.create(new int[]{1})));
-        ListNodeUtils.println(solution.reverse2(ListNodeUtils.create(new int[]{1, 2})));
-        ListNodeUtils.println(solution.reverse2(ListNodeUtils.create(new int[]{1, 2, 3})));
+        ListNodeUtils.println(reverseList.reverse2(ListNodeUtils.create(new int[]{1, 2, 3, 4, 5, 6, 7})));
+        ListNodeUtils.println(reverseList.reverse2(ListNodeUtils.create(new int[]{1})));
+        ListNodeUtils.println(reverseList.reverse2(ListNodeUtils.create(new int[]{1, 2})));
+        ListNodeUtils.println(reverseList.reverse2(ListNodeUtils.create(new int[]{1, 2, 3})));
     }
 }
