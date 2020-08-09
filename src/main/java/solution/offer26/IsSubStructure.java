@@ -1,4 +1,4 @@
-package solution.q18;
+package solution.offer26;
 
 import common.TreeNode;
 import utils.TreeNodeUtils;
@@ -6,16 +6,16 @@ import utils.TreeNodeUtils;
 /**
  * 二叉树A中是否包含子树B
  */
-public class Solution {
+public class IsSubStructure {
 
-    public boolean hasSubTree(TreeNode source, TreeNode target) {
+    public boolean isSubStructure(TreeNode source, TreeNode target) {
         if (source == null || target == null) {
             return false;
         }
         if (doesTree1HaveTree2(source, target)) {
             return true;
         }
-        return hasSubTree(source.left, target) || hasSubTree(source.right, target);
+        return isSubStructure(source.left, target) || isSubStructure(source.right, target);
     }
 
     public static boolean doesTree1HaveTree2(TreeNode source, TreeNode target) {
@@ -45,10 +45,10 @@ public class Solution {
         TreeNodeUtils.postOrder(target);
         System.out.println();
 
-        Solution solution = new Solution();
-        System.out.println(solution.hasSubTree(source, target));
-        System.out.println(solution.hasSubTree(source, TreeNodeUtils.create(new int[]{2, 4})));
-        System.out.println(solution.hasSubTree(source, TreeNodeUtils.create(new int[]{2, 5})));
+        IsSubStructure isSubStructure = new IsSubStructure();
+        System.out.println(isSubStructure.isSubStructure(source, target));
+        System.out.println(isSubStructure.isSubStructure(source, TreeNodeUtils.create(new int[]{2, 4})));
+        System.out.println(isSubStructure.isSubStructure(source, TreeNodeUtils.create(new int[]{2, 5})));
 
     }
 }
