@@ -1,12 +1,38 @@
-package solution.q63;
+package solution.offer54;
 
 import common.TreeNode;
 import utils.TreeNodeUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * 求二叉搜索树第k小的节点
+ * 求二叉搜索树第k大/小的节点
  */
 public class Solution {
+
+    List<Integer> result = new ArrayList<>();
+
+    public int kthLargest(TreeNode root, int k) {
+        if (root == null || k < 1) {
+            return -1;
+        }
+        inOrderVisit(root);
+        return result.get(result.size() - k);
+    }
+
+    private void inOrderVisit(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        if (root.left != null) {
+            inOrderVisit(root.left);
+        }
+        result.add(root.val);
+        if (root.right != null) {
+            inOrderVisit(root.right);
+        }
+    }
 
     public TreeNode kthNode(TreeNode root, int k) {
         if (root == null || k <= 0) {
@@ -37,8 +63,8 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         TreeNode treeNode = TreeNodeUtils.create(new int[]{10, 8, 20, 6, 9, 18, 30, 4});
-        for (int i = 0; i < 8; i++) {
-            System.out.println(solution.kthNode(treeNode, i + 1));
+        for (int i = 1; i <= 8; i++) {
+            System.out.println(solution.kthLargest(treeNode, i) + "==" + solution.kthNode(treeNode, 8 - i + 1));
         }
     }
 }
