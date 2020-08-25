@@ -1,4 +1,4 @@
-package solution.q28;
+package solution.offer35;
 
 import common.ComplexListNode;
 import utils.ListNodeUtils;
@@ -12,11 +12,11 @@ public class Solution {
         Solution solution = new Solution();
         final ComplexListNode complex = ListNodeUtils.createComplex(new int[]{1, 2, 3, 4, 5});
         ListNodeUtils.println(complex);
-        final ComplexListNode clone = solution.clone(complex);
+        final ComplexListNode clone = solution.copyRandomList(complex);
         ListNodeUtils.println(clone);
     }
 
-    public ComplexListNode clone(ComplexListNode head) {
+    public ComplexListNode copyRandomList(ComplexListNode head) {
         if (head == null) {
             return null;
         }
